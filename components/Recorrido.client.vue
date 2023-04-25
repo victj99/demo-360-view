@@ -44,9 +44,9 @@ onMounted(async () => {
   const panoEl = document.querySelector('#panoEl')
 
   const viewer = new Marzipano.Viewer(panoEl);
-  const source = Marzipano.ImageUrlSource.fromString("/images/01.jpg");
-  const source2 = Marzipano.ImageUrlSource.fromString("/images/02.jpg");
-  const source3 = Marzipano.ImageUrlSource.fromString("/images/03.jpg");
+  const source = Marzipano.ImageUrlSource.fromString(usePublicBaseUrl('/images/01.jpg'));
+  const source2 = Marzipano.ImageUrlSource.fromString(usePublicBaseUrl('/images/02.jpg'));
+  const source3 = Marzipano.ImageUrlSource.fromString(usePublicBaseUrl('/images/03.jpg'));
 
   const geometry = new Marzipano.EquirectGeometry([{ width: 8000 }]);
   const limiter = Marzipano.RectilinearView.limit.traditional(1024, 100 * Math.PI / 180);
